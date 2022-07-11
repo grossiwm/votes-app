@@ -12,27 +12,26 @@
 <c:import url="/WEB-INF/jsp/menu.jsp"/>
 
 <div class="container mt-3">
-    <h2>Cadastramento de Endereços</h2>
-
-    <c:if test="${empty endereco.cep}">
-        <form action="/endereco" method="post">
-            <div class="mb-3 mt-3">
-                <label>CEP:
-                    <input type="text" class="form-control" placeholder="Entre com o seu cep" name="cep"
-                           value="${endereco.cep}">
-                </label>
-            </div>
-            <button type="submit" class="btn btn-primary">Buscar</button>
-        </form>
-    </c:if>
-
-
-    <c:if test="${not empty endereco.cep}">
-        <form action="/endereco/incluir" method="post">
-            <c:import url="/WEB-INF/jsp/endereco.jsp"/>
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
-        </form>
-    </c:if>
+    <h2>Cadastro de Eleitor</h2>
+    
+	  <form action="/eleitor/incluir" method="post">
+	    <div class="mb-3 mt-3">
+			
+	      <label>Nome:</label>
+	      <input type="text" class="form-control" placeholder="Entre com o nome" 
+	      		name="nome" value="${eleitor.nome}">
+	      		
+	      <label>Email:</label>
+	      <input type="text" class="form-control" placeholder="Entre com o email" 
+	      		name="email" value="${eleitor.email}">
+	      
+	      <label>Telefone:</label>
+	      <input type="text" class="form-control" placeholder="Entre com o telefone" 
+	      		name="senha" value="${eleitor.telefone}">
+	    </div>
+	    
+	    <button type="submit" class="btn btn-primary">Cadastrar</button>
+	  </form>
 </div>
 
 </body>

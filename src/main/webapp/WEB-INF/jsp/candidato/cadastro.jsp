@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="ISO-8859-1">
-    <title>Eleitor</title>
+    <title>Candidato</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
@@ -12,27 +12,27 @@
 <c:import url="/WEB-INF/jsp/menu.jsp"/>
 
 <div class="container mt-3">
-    <h2>Cadastramento de Endereços</h2>
+    <h2>Cadastro de Candidatos</h2>
 
-    <c:if test="${empty endereco.cep}">
-        <form action="/endereco" method="post">
-            <div class="mb-3 mt-3">
-                <label>CEP:
-                    <input type="text" class="form-control" placeholder="Entre com o seu cep" name="cep"
-                           value="${endereco.cep}">
-                </label>
-            </div>
-            <button type="submit" class="btn btn-primary">Buscar</button>
-        </form>
-    </c:if>
+	  <form action="/candidato/incluir" method="post">
+	    <div class="mb-3 mt-3">
+			
+	      <label>Número:</label>
+	      <input type="text" class="form-control" placeholder="Entre com o número" 
+	      		name="numero" value="${candidato.numero}">
+	      		
+	      <label>Nome:</label>
+	      <input type="text" class="form-control" placeholder="Entre com o nome" 
+	      		name="nome" value="${candidato.nome}">
+	      
+	      <label>Telefone:</label>
+	      <input type="text" class="form-control" placeholder="Entre com o telefone" 
+	      		name="senha" value="${candidato.telefone}">
+	    </div>
+	    
 
-
-    <c:if test="${not empty endereco.cep}">
-        <form action="/endereco/incluir" method="post">
-            <c:import url="/WEB-INF/jsp/endereco.jsp"/>
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
-        </form>
-    </c:if>
+	    <button type="submit" class="btn btn-primary">Cadastrar</button>
+	  </form>
 </div>
 
 </body>

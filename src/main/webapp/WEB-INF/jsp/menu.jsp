@@ -8,8 +8,10 @@
         <ul class="nav navbar-nav">
             <li class="active"><a href="/">Home</a></li>
 
-            <li><a href="/enderecos">Endereco</a></li>
-            <li><a href="/estados">Estados</a></li>
+            <li><a href="/candidatos">Candidato</a></li>
+            <li><a href="/eleicoes">Eleição</a></li>
+            <li><a href="/eleitores">Eleitor</a></li>
+            <li><a href="/votos">Voto</a></li>
         </ul>
 
     </div>
